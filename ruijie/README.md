@@ -28,7 +28,7 @@ Thanks for the contributions of [ysc3839](https://github.com/ysc3839) and [the o
 
 How to use:
 
-The first time to use, you need to add`-w`as an option. And if you have the problem like Insufficient cache space, you need to remove the`/etc/minieap.conf`file to free the space.
+The first time to use, you need to add`-w`as an option. And if you have the problem like Insufficient cache space, you need to remove the`/etc/minieap.conf`file to fix this problem.
 
 ```shell
 sudo ./minieap -u <id> -p <password> -n <network device> --pkt-plugin rjv3 -d 1 -a 1 --rj-option 79:02
