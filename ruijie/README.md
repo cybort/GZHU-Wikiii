@@ -21,14 +21,19 @@ Official Client Download:
 md5: `2ef856e84f49180eeb733b181a3f0474`
 
 ### Minieap client
+
 Thanks for the contributions of [ysc3839](https://github.com/ysc3839) and [the original author](https://github.com/updateing/minieap), now you can use `minieap` to verify the campus network. **Clone repository and check out to the gzhu branch** to compile the executable file.
 
 [Github page](https://github.com/GZHU-Dress/minieap)
 
 How to use:
+
+The first time to use, you need to add`-w`as an option. And if you have the problem like Insufficient cache space, you need to remove the`/etc/minieap.conf`file to free the space.
+
 ```shell
-sudo ./minieap -w -u <id> -p <password> -n <network device> --pkt-plugin rjv3 -d 1 -a 1 --rj-option 79:02
+sudo ./minieap -u <id> -p <password> -n <network device> --pkt-plugin rjv3 -d 1 -a 1 --rj-option 79:02
 ```
+
 ### Relay client
 
 If you want to relay the network by a wireless router, you need to flash the OpenWRT/LEDE image file to your wireless router. And then check this pages:
@@ -62,6 +67,7 @@ Note:
 If you couldn't use the relay way to get the ipv6 address, you can try to add an ipv6 penetrate rule. Install ebtables at first.
 
 Example:
+
 ```shell
 ebtables -t broute -A BROUTING -p ! ipv6 -j DROP -i eth0.2
 brctl addif br-lan eth0.2
