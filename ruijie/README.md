@@ -28,11 +28,15 @@ Thanks for the contributions of [ysc3839](https://github.com/ysc3839) and [the o
 
 How to use:
 
-The first time to use, you need to add`-w`as an option. And if you have the problem like Insufficient cache space, you need to remove the`/etc/minieap.conf`file to fix this problem.
+The first time to use, you need to add`-w`as an option to generate the config file, the defalut path is`/etc/minieap.conf`:
 
 ```shell
-sudo ./minieap -u <id> -p <password> -n <network device> --pkt-plugin rjv3 -d 1 -a 1 --rj-option 79:02
+sudo ./minieap -w -u <id> -p <password> -n <network device> --pkt-plugin rjv3 -d 1 -a 1 --rj-option 79:02
 ```
+
+Since then, use the`--conf-file {path}`option if the path of config file does not default.
+
+And if you have the problem like Insufficient cache space, you need to remove the`/etc/minieap.conf`file and generate again to fix this problem.
 
 ### Relay client
 
